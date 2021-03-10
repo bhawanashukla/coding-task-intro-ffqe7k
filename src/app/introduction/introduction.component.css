@@ -1,0 +1,75 @@
+.maincontainer {
+  border: 1px solid white;
+}
+.mainBG {
+  background: #00b4db; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0083b0,
+    #00b4db
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083b0, #00b4db);
+}
+
+.deptBG {
+  background: #a8c0ff;
+  background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);
+  background: linear-gradient(to right, #3f2b96, #a8c0ff);
+}
+.lastlevelBG {
+  background: #a8c0ff;
+}
+
+.title {
+  border-bottom: 1px solid white;
+}
+
+.content {
+  margin: 1rem;
+}
+
+button,
+button:focus {
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: none;
+  color: black;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+h4 {
+  text-align: center;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: -1.23px;
+  text-align: center;
+  color: white;
+}
+
+p,
+li {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  /* identical to box height, or 171% */
+  letter-spacing: -0.1px;
+  /* Neutral / black */
+  color: #445660;
+}

@@ -1,0 +1,65 @@
+<div class="maincontainer mainBG" style="height:100%;min-height:500px;
+ margin-right: -600px;margin-left: -600px;">
+	<div class="title">
+		<h3>Management Dashboard</h3>
+	</div>
+	<div class="content" style="margin: 0 auto;padding: 40px 600px;">
+		<button (click)="createDepartment()">Create Department</button>
+		<div class="main" style="display:flex;">
+			<div class="maincontainer deptBG" *ngFor="let dept of departmentObj;let i=index"
+				style="margin-left:0.5rem;min-height:300px;width:100%;">
+				<div class="title">
+					<h3>Department {{i+1}}</h3>
+					<h4>Total Cost - {{dept.totalCost}}</h4>
+				</div>
+				<div class="content">
+					<button (click)="addManager(i)">Add Manager</button>
+					<div class="main" style="display:flex;">
+						<div class="maincontainer lastlevelBG" *ngFor="let managerObj of dept.managerObj;let j=index">
+							<div class="title">
+								<h3>Manager {{j+1}}</h3>
+								<h4>Total Cost - {{managerObj.totalCost}}</h4>
+							</div>
+							<div class="content">
+								<button (click)="addSubManager(i,j)">Add Manager</button>
+								<button (click)="addDeveloper(i,j)" style="margin-left:0.5rem">Add Developer</button>
+								<button (click)="addTester(i,j)" style="margin-left:0.5rem">Add QA Tester</button>
+
+								<div class="maincontainer">
+									<div class="content">
+										<h4>Developer - {{managerObj.developerCount}}</h4>
+									</div>
+									<div class="content">
+										<h4>Tester - {{managerObj.testerCount}}</h4>
+									</div>
+								</div>
+								<div class="main" style="display:flex;">
+									<div class="maincontainer" *ngFor="let manager of managerObj.subManager;let k=index"
+										style="background-color:lightblue">
+										<div class="title">
+											<h3>Manager {{j+k+2}}</h3>
+											<h4>Total Cost - {{manager.totalCost}}</h4>
+										</div>
+										<div class="content">
+											<button (click)="addSubManager(i,j)">Add Manager</button>
+											<button (click)="addDeveloper(i,j,k)" style="margin-left:0.5rem">Add Developer</button>
+											<button (click)="addTester(i,j,k)" style="margin-left:0.5rem">Add QA Tester</button>
+
+											<div class="maincontainer">
+												<div class="content">
+													<h4>Developer - {{manager.developerCount}}</h4>
+												</div>
+												<div class="content">
+													<h4>Tester - {{manager.testerCount}}</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
